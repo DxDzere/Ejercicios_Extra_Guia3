@@ -25,9 +25,15 @@ public class Ejercicio_7_while {
         cantNum = leer.nextInt();
         
         while(cont<=cantNum){
-            System.out.println("Ingrese un numero.");
+            System.out.println("Ingrese un numero mayor a 0.");
             System.out.print("Nuemro "+cont+": ");
             num = leer.nextInt();
+            
+            while(num<=0){
+                System.out.println("ERROR. El numero debe ser mayor a 0.");
+                System.out.println("Reingrese el numero.");
+                num=leer.nextInt();
+            }
             
             if(cont == 1){
                 max=num;

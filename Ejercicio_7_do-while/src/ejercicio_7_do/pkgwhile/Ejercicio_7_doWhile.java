@@ -16,7 +16,8 @@ public class Ejercicio_7_doWhile {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {Scanner leer = new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in);
         int num, cantNum, max, min, cont=0;
         float sum;
         
@@ -26,6 +27,11 @@ public class Ejercicio_7_doWhile {
         System.out.println("Ingrese un numero.");
         System.out.print("Nuemro "+(cont+1)+": ");
         num = leer.nextInt();
+        while(num<=0){
+            System.out.println("ERROR. El numero debe ser mayor a 0.");
+            System.out.println("Reingrese el numero.");
+            num=leer.nextInt();
+        }
         max=num;
         min=num;
         sum=num;
@@ -35,7 +41,11 @@ public class Ejercicio_7_doWhile {
             System.out.println("Ingrese un numero.");
             System.out.print("Nuemro "+(cont+1)+": ");
             num = leer.nextInt();
-            
+            while(num<=0){
+                System.out.println("ERROR. El numero debe ser mayor a 0.");
+                System.out.println("Reingrese el numero.");
+                num=leer.nextInt();
+            }
             if(num<min){
                 min=num;
             }else if(num>max){
